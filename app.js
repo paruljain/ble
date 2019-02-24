@@ -1,5 +1,9 @@
 'use strict'
 
+const noble = require('noble')
+
+console.log('Started')
+
 noble.on('stateChange', function(state) {
     if (state === 'poweredOn') {
       noble.startScanning()
